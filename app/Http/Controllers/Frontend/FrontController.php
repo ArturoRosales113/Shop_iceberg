@@ -8,9 +8,16 @@ use Illuminate\Http\Request;
 
 class FrontController extends Controller
 {
+<<<<<<< HEAD
     public function __construct()
     {
         $this->middleware('auth:frontweb');
+=======
+  protected $redirectTo ='/home';
+
+    public function __construct()
+    {
+>>>>>>> 8d81bf3528f96f2fb8009c0f285f0d11ef325c59
     }
 
     public function index()
