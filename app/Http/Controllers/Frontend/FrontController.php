@@ -8,10 +8,11 @@ use Illuminate\Http\Request;
 
 class FrontController extends Controller
 {
-    // public function __construct()
-    // {
-    //     $this->middleware('guest:frontweb');
-    // }
+  protected $redirectTo ='/home';
+
+    public function __construct()
+    {
+    }
 
     public function index()
     {
