@@ -4,7 +4,7 @@ Route::redirect('/','home', 301);
 Route::namespace('Frontend')->group(function () {
     // Controllers Within The "App\Http\Controllers\Frontend" Namespace
     //s
-    Route::get('/home','FrontController@index')->name('/home');
+    Route::get('/home','FrontController@index')->name('front.home');
     //Sucursales
     Route::get('/sucursales', 'FrontController@sucursales')->name('front.sucursales');
     //Contacto
@@ -27,6 +27,8 @@ Route::prefix('/customer')->group(function () {
   Route::get('login','Auth\CustomerLoginController@showLoginForm')->name('customer.login');
   //Rutas de usuario
   Route::post('login','Auth\CustomerLoginController@login')->name('customer.login.submit');
+  //Rutas de usuario
+  Route::post('logout','Auth\CustomerLoginController@logut')->name('customer.logout');
  });
 
 // Rutas del administrador

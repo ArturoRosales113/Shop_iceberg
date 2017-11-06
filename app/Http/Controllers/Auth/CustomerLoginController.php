@@ -55,4 +55,9 @@ class CustomerLoginController extends Controller
         Auth::guard('frontweb')->login($cust);
         return redirect(route('customer.profile'));
     }
+    public function logout()
+    {
+      Auth::guard('frontweb')->logout();
+      return redirect('/');
+    }
 }

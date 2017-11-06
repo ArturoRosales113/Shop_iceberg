@@ -20,13 +20,13 @@ class RedirectIfAuthenticated
        switch ($guard) {
         case 'frontweb':
          if(Auth::guard($guard)->check()){
-          return redirect()->route('/home');
+          return redirect()->route('front.home');
+          // return $next($request);
          }
          break;
 
         default:
         if (Auth::guard($guard)->check()) {
-
             return redirect('manager');
         }
          break;

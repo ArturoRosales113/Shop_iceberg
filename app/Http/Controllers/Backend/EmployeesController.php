@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class EmployeesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +17,7 @@ class EmployeesController extends Controller
      */
     public function index()
     {
-       return view('backend.employees.employees'); //
+        return view('backend.employees.employees'); //
     }
 
     /**
@@ -83,6 +87,6 @@ class EmployeesController extends Controller
     }
     public function search()
     {
-       return view('backend.orders.search'); //
+        return view('backend.orders.search'); //
     }
 }
